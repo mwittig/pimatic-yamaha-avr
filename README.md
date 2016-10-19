@@ -8,7 +8,7 @@ Pimatic plugin to monitor &amp; control a Yamaha AV Receiver over a network conn
 
 ## Status of Implementation
 
-The following feature are provided:
+The following features are provided:
 * support for power switching, volume mute, volume control, input selection, and status display (main zone, only)
 * auto-discovery of devices for pimatic 0.9
 
@@ -19,6 +19,10 @@ Additional features can be added easily and I am happy to do this on demand.
 Contributions to the project are  welcome. You can simply fork the project and create a pull request with 
 your contribution to start with. If you like this plugin, please consider &#x2605; starring 
 [the project on github](https://github.com/mwittig/pimatic-yamaha-avr).
+
+## Credits 
+
+Many thanks to @ccvh and @seelenbrokat for their support in testing stuff at the early stages of development!
 
 ## Plugin Configuration
 
@@ -120,7 +124,7 @@ The device has the following configuration properties:
 | volumeDbMin       | -80.5    | Number  | The minimal volume in dB of the receiver (check the AVR manual to get the right setting) |
 | volumeDbMax       | 16.5     | Number  | The maximum volume in dB of the receiver (check the AVR manual to get the right setting) |
 
-## YamahaAvrInputSelector
+### YamahaAvrInputSelector
 
 The YamahaAvrInputSelector can be used to select the input source. Allowed values for input selection 
 depend on the AVR model.
