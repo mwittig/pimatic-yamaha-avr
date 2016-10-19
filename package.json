@@ -1,0 +1,54 @@
+{
+  "name": "pimatic-yamaha-avr",
+  "description": "Pimatic Plugin to monitor and control a Yamaha AV Receiver",
+  "author": {
+    "name": "Marcus Wittig",
+    "url": "https://github.com/mwittig"
+  },
+  "main": "yamaha-avr",
+  "icon": "assets/images/logo.svg",
+  "files": [
+    "yamaha-avr.coffee",
+    "yamaha-avr-commands.coffee",
+    "yamaha-avr-config-schema.coffee",
+    "device-config-schema.coffee",
+    "devices",
+    "LICENSE",
+    "HISTORY.md",
+    "README.md"
+  ],
+  "keywords": [
+    "Yamaha AVR",
+    "Pimatic"
+  ],
+  "version": "0.9.0-pre3",
+  "homepage": "https://github.com/mwittig/pimatic-yamaha-avr/tree/master",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mwittig/pimatic-yamaha-avr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mwittig/pimatic-yamaha-avr/issues"
+  },
+  "license": "AGPL-3.0",
+  "maintainers": [
+    {
+      "name": "mwittig",
+      "url": "https://github.com/mwittig"
+    }
+  ],
+  "configSchema": "yamaha-avr-config-schema.coffee",
+  "dependencies": {
+    "pimatic-plugin-commons": "^0.9.3",
+    "restler-promise": "0.0.3"
+  },
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "pimatic": ">=0.9.0 <1.0.0"
+  },
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  }
+}
