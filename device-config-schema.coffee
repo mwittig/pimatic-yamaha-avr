@@ -89,7 +89,9 @@ module.exports = {
                 "AV2", "AV3", "AV4", "AV5", "AV6", "AV7", "V-AUX", "AUDIO1",
                 "AUDIO2", "AUDIO3", "AUDIO4", "DOCK", "iPod", "Bluetooth",
                 "UAW", "NET", "Rhapsody", "SIRIUS InternetRadio", "Pandora",
-                "Napster", "PC", "NET RADIO", "USB", "iPod (USB)"
+                "Napster", "PC", "NET RADIO", "USB", "iPod (USB)", 
+                "OPTICAL1”, “OPTICAL2”, “Spotify”, “SERVER”, “AirPlay”, “CD”,
+                “COAXIAL1”, “COAXIAL2”, “LINE1”, “LINE2”, “LINE3”
               ]
               description: "The input ids switchable by the AVR"
             text:
