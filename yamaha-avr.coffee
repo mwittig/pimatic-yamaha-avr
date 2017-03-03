@@ -31,6 +31,9 @@ module.exports = (env) ->
     }
   ]
 
+  actionProviders = [
+    'yamaha-avr-input-select-action'
+  ]
 
   # ###YamahaAvrPlugin class
   class YamahaAvrPlugin extends env.plugins.Plugin
@@ -54,6 +57,12 @@ module.exports = (env) ->
             createCallback: (config, lastState) =>
               return new classType(config, @, lastState)
           })
+
+      for provider in actionProviders
+        className = provider.replace(/(^[a-z])|(\-[a-z])/g, ($1) -> $1.toUpperCase().replace('-','')) + 'Provider'
+        classType = require('./actions/' + provider)(env)
+        @base.debug "Registering action provider #{className}"
+        @framework.ruleManager.addActionProvider(new classType @framework)
 
       # auto-discovery
       @framework.deviceManager.on('discover', (eventData) =>
