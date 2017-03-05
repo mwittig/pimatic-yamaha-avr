@@ -49,7 +49,7 @@ module.exports = (env) ->
         do (device) =>
           className = device.class
           # convert camel-case classname to kebap-case filename
-          filename = className.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+          filename = className.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
           classType = require('./devices/' + filename)(env)
           @base.debug "Registering device class #{className}"
           @framework.deviceManager.registerDeviceClass(className, {
@@ -77,23 +77,23 @@ module.exports = (env) ->
       )
 
     _requestStatusUpdates: () ->
-        @base.cancelUpdate()
-        @base.debug "Requesting status update"
-        @sendRequest(cmd.command cmd.get, cmd.mainZone cmd.basicStatus cmd.getParam).then (data) =>
-          status =
-            Power: query.powerState query.powerControl query.basicStatus query.mainZone query.command data
-            Mute: query.mute query.volume query.basicStatus query.mainZone query.command data
-            Volume: (query.val query.level query.volume query.basicStatus query.mainZone query.command data) / 10
-            Input:
-              Select: query.inputSelect query.input query.basicStatus query.mainZone query.command data
-          @emit 'statusUpdate', status
-        .catch (errorResult) =>
-          @base.error "Error:", if errorResult instanceof Error then errorResult else errorResult.error
-        .finally () =>
-          unless @listenerCount 'statusUpdate' is 0
-            @base.scheduleUpdate(@_requestStatusUpdates, @updateInterval)
-          else
-            @base debug "No more listeners for status updates. Stopping update cycle"
+      @base.cancelUpdate()
+      @base.debug "Requesting status update"
+      @sendRequest(cmd.command cmd.get, cmd.mainZone cmd.basicStatus cmd.getParam).then (data) =>
+        status =
+          Power: query.powerState query.powerControl query.basicStatus query.mainZone query.command data
+          Mute: query.mute query.volume query.basicStatus query.mainZone query.command data
+          Volume: (query.val query.level query.volume query.basicStatus query.mainZone query.command data) / 10
+          Input:
+            Select: query.inputSelect query.input query.basicStatus query.mainZone query.command data
+        @emit 'statusUpdate', status
+      .catch (errorResult) =>
+        @base.error "Error:", if errorResult instanceof Error then errorResult else errorResult.error
+      .finally () =>
+        unless @listenerCount 'statusUpdate' is 0
+          @base.scheduleUpdate(@_requestStatusUpdates, @updateInterval)
+        else
+          @base debug "No more listeners for status updates. Stopping update cycle"
 
     startStatusUpdates: (interval) ->
       if not @updateInterval? or @updateInterval > @updateInterval
