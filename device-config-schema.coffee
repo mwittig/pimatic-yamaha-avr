@@ -4,7 +4,7 @@ module.exports = {
     title: "Yamaha AVR Power Switch"
     description: "Yamaha AVR Power Switch"
     type: "object"
-    extensions: ["xLink", "xPresentLabel", "xAbsentLabel"]
+    extensions: ["xLink", "xPresentLabel", "xAbsentLabel", "xAttributeOptions"]
     properties:
       interval:
         description: "The time interval in seconds (minimum 10) at which the power state of the AVR will be read"
@@ -15,7 +15,7 @@ module.exports = {
     title: "Yamaha AVR Master Volume"
     description: "Yamaha AVR Master Volume"
     type: "object"
-    extensions: ["xLink", "xPresentLabel", "xAbsentLabel"]
+    extensions: ["xLink", "xPresentLabel", "xAbsentLabel", "xAttributeOptions"]
     properties:
       interval:
         description: "The time interval in seconds (minimum 10) at which the power state of the AVR will be read"
