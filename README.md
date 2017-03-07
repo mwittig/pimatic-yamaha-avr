@@ -69,6 +69,9 @@ The device has the following configuration properties:
 |:------------------|:---------|:--------|:--------------------------------------------|
 | interval          | 30       | Number  | The time interval in seconds (minimum 10) at which the power state of the AVR will be read |
 
+The following predicates and actions are supported:
+* `{device} is present|absent`
+
 ### YamahaAvrPowerSwitch
 
 The Power Switch can be used to switch the AVR on or off (standby) mode. Depending on your
@@ -86,6 +89,10 @@ The device has the following configuration properties:
 |:------------------|:---------|:--------|:--------------------------------------------|
 | interval          | 30       | Number  | The time interval in seconds (minimum 10) at which the power state of the AVR will be read |
 
+The following predicates and actions are supported:
+* `{device} is turned on|off`
+* `switch {device} on|off`
+* `toggle {device}`
 
 ### YamahaAvrMuteSwitch
 
@@ -103,6 +110,10 @@ The device has the following configuration properties:
 |:------------------|:---------|:--------|:--------------------------------------------|
 | interval          | 30       | Number  | The time interval in seconds (minimum 10) at which the power state of the AVR will be read |
 
+The following predicates and actions are supported:
+* `{device} is turned on|off`
+* `switch {device} on|off`
+* `toggle {device}`
 
 ### YamahaAvrMasterVolume
 
@@ -125,6 +136,10 @@ The device has the following configuration properties:
 | volumeDecibel     | 16.5     | Number  | The maximum volume which can be set using the volume control |
 | volumeDbMin       | -80.5    | Number  | The minimal volume in dB of the receiver (check the AVR manual to get the right setting) |
 | volumeDbMax       | 16.5     | Number  | The maximum volume in dB of the receiver (check the AVR manual to get the right setting) |
+
+The following predicates and actions are supported:
+* `dimlevel of {device} {Comparison Operator} {Value}`, where `{Value}` is the percentage of volume 0-100
+* `dim {device} to {Value}`, where `{Value}` is the percentage of volume 0-100
 
 ### YamahaAvrInputSelector
 
