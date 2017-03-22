@@ -6,12 +6,12 @@
     "url": "https://github.com/mwittig"
   },
   "main": "yamaha-avr",
-  "icon": "assets/images/logo.svg",
   "files": [
     "yamaha-avr.coffee",
     "yamaha-avr-commands.coffee",
     "yamaha-avr-config-schema.coffee",
     "device-config-schema.coffee",
+    "actions",
     "devices",
     "LICENSE",
     "HISTORY.md",
