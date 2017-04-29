@@ -1,5 +1,7 @@
 # pimatic-yamaha-avr
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mwittig/pimatic-yamaha-avr.svg)](https://greenkeeper.io/)
+
 [![Npm Version](https://badge.fury.io/js/pimatic-yamaha-avr.svg)](http://badge.fury.io/js/pimatic-yamaha-avr)
 [![Build Status](https://travis-ci.org/mwittig/pimatic-yamaha-avr.svg?branch=master)](https://travis-ci.org/mwittig/pimatic-yamaha-avr)
 [![Dependency Status](https://david-dm.org/mwittig/pimatic-yamaha-avr.svg)](https://david-dm.org/mwittig/pimatic-yamaha-avr)
