@@ -1,5 +1,9 @@
 # Release History
 
+* 20180216, V0.9.4
+    * Added experimental scene selector device, issue #9
+    * Updated to restler-promise@0.0.8
+
 * 20170322, V0.9.3
     * Fixed packaging properties to include actions directory
     * Added "xAttributeOptions" to config schema for YamahaAvrPresenceSensor and YamahaAvrMasterVolume
