@@ -13,7 +13,9 @@ module.exports = {
     val: (command) -> "<Val>#{command}</Val><Exp>1</Exp><Unit>dB</Unit>"
     mute: (state) -> "<Mute>#{if state then "On" else "Off"}</Mute>"
     input: (command) -> "<Input>#{command}</Input>"
-    inputSelect: (command) -> "<Input_Sel>#{command}</Input_Sel>"
+    scene: (command) -> "<Scene>#{command}</Scene>"
+    inputSelect: (parameter) -> "<Input_Sel>#{parameter}</Input_Sel>"
+    sceneSelect: (parameter) -> "<Scene_Sel>#{parameter}</Scene_Sel>"
 
   query:
     resultCode: (object) -> parseInt object.YAMAHA_AV.$.RC

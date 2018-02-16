@@ -148,7 +148,7 @@ depend on the AVR model.
 
     {
           "id": "avr-5",
-          "name": "AVR Inout Selector",
+          "name": "AVR Input Selector",
           "class": "YamahaAvrInputSelector"
           "buttons": [
                {
@@ -170,6 +170,29 @@ The device has the following configuration properties:
 The following action is provided to switch the input source as part of rules
 
 * `avr input <device> to "<id>"`, for example: `avr input yamaha-avr to "tv"`
+
+### YamahaAvrSceneSelector (Experimental)
+
+Similar to the input selector, the YamahaAvrSceneSelector can be used switch the the input by selecting a scene if the
+AVR supports that feature. Allowed values for scene selection depend on the AVR model.
+
+    {
+          "id": "avr-5",
+          "name": "AVR Scene Selector",
+          "class": "YamahaAvrSceneSelector"
+          "buttons": [
+               {
+                 "id": "TV"
+               }
+          ]
+    }
+
+The device has the following configuration properties:
+
+| Property          | Default  | Type    | Description                                 |
+|:------------------|:---------|:--------|:--------------------------------------------|
+| interval          | 20       | Number  | The time interval in seconds (minimum 10) at which the power state of the AVR will be read |
+| buttons           | see example | Array   | The buttons to display for selection. See device configuration schema for details |
 
 ## History
 

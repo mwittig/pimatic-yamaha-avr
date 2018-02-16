@@ -29,6 +29,10 @@ module.exports = (env) ->
       "name": "Yamaha AVR Input Selector",
       "class": "YamahaAvrInputSelector",
     }
+    {
+      "name": "Yamaha AVR Scene Selector",
+      "class": "YamahaAvrSceneSelector",
+    }
   ]
 
   actionProviders = [
@@ -80,6 +84,7 @@ module.exports = (env) ->
       @base.cancelUpdate()
       @base.debug "Requesting status update"
       @sendRequest(cmd.command cmd.get, cmd.mainZone cmd.basicStatus cmd.getParam).then (data) =>
+        @base.debug JSON.stringify(data)
         status =
           Power: query.powerState query.powerControl query.basicStatus query.mainZone query.command data
           Mute: query.mute query.volume query.basicStatus query.mainZone query.command data

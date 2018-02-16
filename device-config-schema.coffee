@@ -103,4 +103,39 @@ module.exports = {
               type: "boolean"
               default: false
   }
+  YamahaAvrSceneSelector: {
+    title: "Yamaha AVR Scene Selector"
+    description: "Yamaha AVR Scene Selector"
+    type: "object"
+    extensions: ["xLink", "xOnLabel", "xOffLabel"]
+    properties:
+      interval:
+        description: "The time interval in seconds (minimum 10) at which the mutr state of the AVR will be read"
+        type: "number"
+        default: 30
+        minimum: 10
+      buttons:
+        description: "The scenes to select from"
+        type: "array"
+        default: [
+          {
+            id: "TV"
+          }
+        ]
+        format: "table"
+        items:
+          type: "object"
+          properties:
+            id:
+              type: "string"
+              description: "The scene ids switchable by the AVR"
+            text:
+              type: "string"
+              description: "The button text to be displayed. The id will be displayed if not set"
+              required: false
+            confirm:
+              description: "Ask the user to confirm the scene select"
+              type: "boolean"
+              default: false
+  }
 }
