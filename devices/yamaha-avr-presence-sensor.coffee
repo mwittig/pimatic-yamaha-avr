@@ -5,7 +5,8 @@ module.exports = (env) ->
   commons = require('pimatic-plugin-commons')(env)
 
 
-  # Device class representing an the power state of the Yamaha AVR
+  # Device class representing an the power state of the Yamaha AVR including additional information
+  # on the volume and selected input
   class YamahaAvrPresenceSensor extends env.devices.PresenceSensor
 
     # Create a new YamahaAvrPresenceSensor device

@@ -6,7 +6,7 @@ module.exports = (env) ->
   commands = require '../yamaha-avr-commands'
   cmd = commands.cmd
 
-  # Device class representing an the power state of the Yamaha AVR
+  # Device class representing an the master volume of the Yamaha AVR
   class YamahaAvrMasterVolume extends env.devices.DimmerActuator
 
     # Create a new YamahaAvrPresenceSensor device

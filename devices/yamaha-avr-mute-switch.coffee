@@ -6,7 +6,7 @@ module.exports = (env) ->
   commands = require '../yamaha-avr-commands'
   cmd = commands.cmd
 
-  # Device class representing the power switch of the Yamaha AVR
+  # Device class representing the mute switch of the Yamaha AVR
   class YamahaAvrMuteSwitch extends env.devices.PowerSwitch
 
     # Create a new YamahaAvrMuteSwitch device
